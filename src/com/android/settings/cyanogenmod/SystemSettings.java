@@ -85,10 +85,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
         try {
             if (windowManager.hasNavigationBar()) {
                 removeKeys = true;
-                if (Utils.isTablet(getActivity())) {
-                    removeNavbar = true;
-                }
-            } else {
+             } else {
                 removeNavbar = true;
             }
         } catch (RemoteException e) {
