@@ -17,16 +17,22 @@
 package com.android.settings.cyanogenmod;
 
 import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.IWindowManager;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SystemSettings extends SettingsPreferenceFragment {
     private static final String TAG = "SystemSettings";
@@ -45,6 +51,11 @@ public class SystemSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.system_settings);
+
+        // Dont display the lock clock preference if its not installed
+        removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
+
+        // Notification lights
         mNotificationPulse = (PreferenceScreen) findPreference(KEY_NOTIFICATION_PULSE);
         if (mNotificationPulse != null) {
             if (!getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed)) {
@@ -54,6 +65,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
             }
         }
 
+        // Battery lights
         mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
         if (mBatteryPulse != null) {
             if (getResources().getBoolean(
