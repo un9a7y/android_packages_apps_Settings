@@ -49,9 +49,12 @@
         android:title="@string/power_menu_user_title"
         android:defaultValue="false" />
 
-    <CheckBoxPreference
-        android:key="power_menu_sound"
-        android:title="@string/power_menu_sound_title"
-        android:defaultValue="true" />
+    <ListPreference
+            android:key="on_screen_buttons_height"
+            android:title="@string/on_screen_buttons_height_title"
+            android:summary="@string/on_screen_buttons_height_summary"
+            android:persistent="false"
+            android:entries="@array/on_screen_buttons_height_entries"
+            android:entryValues="@array/on_screen_buttons_height_values" />
 
 </PreferenceScreen>

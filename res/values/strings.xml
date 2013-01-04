@@ -5112,5 +5112,9 @@
     <string name="stylus_icon_enabled_title">Show icon when using stylus</string>
     <string name="stylus_icon_enabled_summary">Show the pointer icon when hovering or drawing with the stylus</string>
 
+    <!-- On-Screen Buttons -->
+    <string name="on_screen_buttons_height_title">Navigation bar</string>
+    <string name="on_screen_buttons_height_summary">Realtime height change</string>
+
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
