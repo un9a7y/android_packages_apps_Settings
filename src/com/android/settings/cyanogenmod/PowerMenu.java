@@ -37,9 +37,6 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private static final String KEY_AIRPLANE = "power_menu_airplane";
     private static final String KEY_USER = "power_menu_user";
     private static final String KEY_SOUND = "power_menu_sound";
-    private static final String ON_SCREEN_BUTTONS_HEIGHT = "on_screen_buttons_height";
-
-    private static final int FALLBACK_ON_SCREEN_BUTTONS_HEIGHT = 56;
 
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
@@ -48,7 +45,6 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private CheckBoxPreference mAirplanePref;
     private CheckBoxPreference mUserPref;
     private CheckBoxPreference mSoundPref;
-    private ListPreference mOnScreenButtonsHeight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,7 +84,7 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mAirplanePref = (CheckBoxPreference) findPreference(KEY_AIRPLANE);
         mAirplanePref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_AIRPLANE_ENABLED, 1) == 1));
-        
+
         mUserPref = (CheckBoxPreference) findPreference(KEY_USER);
         if (!UserHandle.MU_ENABLED
             || !UserManager.supportsMultipleUsers()) {
@@ -101,11 +97,6 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mSoundPref = (CheckBoxPreference) findPreference(KEY_SOUND);
         mSoundPref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_SOUND_ENABLED, 1) == 1));
-
-        mOnScreenButtonsHeight = (ListPreference) findPreference(ON_SCREEN_BUTTONS_HEIGHT);
-        final long currentOnScreenButtonsHeight = Settings.System.getLong(resolver, ON_SCREEN_BUTTONS_HEIGHT, FALLBACK_ON_SCREEN_BUTTONS_HEIGHT);
-        mOnScreenButtonsHeight.setValue(String.valueOf(currentOnScreenButtonsHeight));
-        mOnScreenButtonsHeight.setOnPreferenceChangeListener(this);
 
     }
 
