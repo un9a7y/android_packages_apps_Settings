@@ -82,7 +82,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private WarnedListPreference mFontSizePref;
 
     private ListPreference mOnScreenButtonsHeight;
-    private ListPreference mOnScreenButtonsWidth;
 
     private final Configuration mCurConfig = new Configuration();
 
