@@ -81,4 +81,12 @@
             android:entries="@array/on_screen_buttons_height_entries"
             android:entryValues="@array/on_screen_buttons_height_values" />
 
+        <ListPreference
+            android:key="on_screen_buttons_width"
+            android:title="@string/on_screen_buttons_width_title"
+            android:summary="@string/on_screen_buttons_width_summary"
+            android:persistent="false"
+            android:entries="@array/on_screen_buttons_width_entries"
+            android:entryValues="@array/on_screen_buttons_width_values" />
+
 </PreferenceScreen>
