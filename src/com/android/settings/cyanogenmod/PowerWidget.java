@@ -244,13 +244,13 @@ public class PowerWidget extends SettingsPreferenceFragment implements
             }
 
             // Don't show mobile data options if not supported
-            boolean isMobileData = pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
-            if (!isMobileData) {
-                PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_MOBILEDATA);
-                PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_NETWORKMODE);
-                PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_WIFIAP);
-                prefButtonsModes.removePreference(mNetworkMode);
-            }
+            // boolean isMobileData = pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
+            // if (!isMobileData) {
+                // PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_MOBILEDATA);
+                // PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_NETWORKMODE);
+                // PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_WIFIAP);
+                // prefButtonsModes.removePreference(mNetworkMode);
+            // }
 
             // fill that checkbox map!
             for (PowerWidgetUtil.ButtonInfo button : PowerWidgetUtil.BUTTONS.values()) {
