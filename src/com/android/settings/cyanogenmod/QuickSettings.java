@@ -142,6 +142,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         mDynamicWifi.setChecked(Settings.System.getInt(resolver, Settings.System.QS_DYNAMIC_WIFI, 1) == 1);
 
         // Don't show mobile data options if not supported
+        boolean isMobileData = pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
+        if (!isMobileData) {
+            QuickSettingsUtil.TILES.remove(QuickSettingsUtil.TILE_MOBILEDATA);
+            QuickSettingsUtil.TILES.remove(QuickSettingsUtil.TILE_WIFIAP);
+            QuickSettingsUtil.TILES.remove(QuickSettingsUtil.TILE_NETWORKMODE);
             if(mNetworkMode != null)
                 mStaticTiles.removePreference(mNetworkMode);
             QuickSettingsUtil.TILES_DEFAULT.remove(QuickSettingsUtil.TILE_WIFIAP);
