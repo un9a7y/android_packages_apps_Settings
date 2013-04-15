@@ -549,6 +549,49 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+  
+    <!-- Quick pulldown -->
+    <string-array name="quick_pulldown_entries" translatable="false">
+        <item>@string/quick_pulldown_off</item>
+        <item>@string/quick_pulldown_right</item>
+        <item>@string/quick_pulldown_left</item>
+    </string-array>
+
+    <string-array name="quick_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Sms security limit -->
+    <string-array name="sms_security_check_limit_entries" translatable="false">
+        <item>@string/sms_security_check_limit_default</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        </string-array>
+
+    <string-array name="sms_security_check_limit_values" translatable="false">
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        </string-array>
+
+    <!-- Custom lock screen background-->
+    <string-array name="lockscreen_background_entries" translatable="false">
+        <item>@string/lockscreen_background_color_fill</item>
+        <item>@string/lockscreen_background_custom_image</item>
+        <item>@string/lockscreen_background_default_wallpaper</item>
+    </string-array>
+
+    <string-array name="lockscreen_background_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 
     <!-- Battery bar -->
     <string-array name="battery_bar_entries">
@@ -601,50 +644,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-    </string-array>
-
-
-    <!-- Quick pulldown -->
-    <string-array name="quick_pulldown_entries" translatable="false">
-        <item>@string/quick_pulldown_off</item>
-        <item>@string/quick_pulldown_right</item>
-        <item>@string/quick_pulldown_left</item>
-    </string-array>
-
-    <string-array name="quick_pulldown_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
-    <!-- Sms security limit -->
-    <string-array name="sms_security_check_limit_entries" translatable="false">
-        <item>@string/sms_security_check_limit_default</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
-        <item>500</item>
-        </string-array>
-
-    <string-array name="sms_security_check_limit_values" translatable="false">
-        <item>30</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
-        <item>500</item>
-        </string-array>
-
-    <!-- Custom lock screen background-->
-    <string-array name="lockscreen_background_entries" translatable="false">
-        <item>@string/lockscreen_background_color_fill</item>
-        <item>@string/lockscreen_background_custom_image</item>
-        <item>@string/lockscreen_background_default_wallpaper</item>
-    </string-array>
-
-    <string-array name="lockscreen_background_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
     </string-array>
 
     <!-- Stylus Gestures -->
