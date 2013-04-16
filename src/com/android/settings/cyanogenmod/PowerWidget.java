@@ -53,6 +53,8 @@ import com.android.internal.telephony.Phone;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import static com.android.internal.util.cm.QSUtils.deviceSupportsMobileData;
+
 public class PowerWidget extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "PowerWidget";
@@ -244,13 +246,12 @@ public class PowerWidget extends SettingsPreferenceFragment implements
             }
 
             // Don't show mobile data options if not supported
-            // boolean isMobileData = pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
-            // if (!isMobileData) {
-                // PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_MOBILEDATA);
-                // PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_NETWORKMODE);
-                // PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_WIFIAP);
-                // prefButtonsModes.removePreference(mNetworkMode);
-            // }
+            if (!deviceSupportsMobileData(getActivity())) {
+                PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_MOBILEDATA);
+                PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_NETWORKMODE);
+                PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_WIFIAP);
+                prefButtonsModes.removePreference(mNetworkMode);
+            }
 
             // fill that checkbox map!
             for (PowerWidgetUtil.ButtonInfo button : PowerWidgetUtil.BUTTONS.values()) {
