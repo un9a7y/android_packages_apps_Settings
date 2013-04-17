@@ -60,8 +60,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     // If there is no setting in the provider, use this
     private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 30000;
-    private static final int FALLBACK_ON_SCREEN_BUTTONS_HEIGHT = 56;
-    private static final int FALLBACK_ON_SCREEN_BUTTONS_WIDTH = 56;
+    private static final int FALLBACK_ON_SCREEN_BUTTONS_HEIGHT = 32;
+    private static final int FALLBACK_ON_SCREEN_BUTTONS_WIDTH = 32;
 
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_FONT_SIZE = "font_size";
@@ -447,7 +447,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     updateCustomLabelTextSummary();
                     Intent i = new Intent();
                     i.setAction("com.android.settings.LABEL_CHANGED");
-                    mContext.sendBroadcast(i);
+                    getActivity().sendBroadcast(i);
                 }
             });
             alert.setNegativeButton(getResources().getString(R.string.cancel),
