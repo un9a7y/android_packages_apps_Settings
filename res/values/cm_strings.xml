@@ -1176,6 +1176,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
 
+    <!-- Color Picker -->
     <string name="dialog_color_picker">Color picker</string>
     <string name="press_color_to_apply">Tap on color to apply</string>
     <string name="arrow_right" translatable="false">\u2192</string>
@@ -1184,6 +1185,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ics_color" translatable="false">!!!</string>
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
+    <string name="color_default">Default</string>
 
     <string name="auto_brightness_sensitivity_title">Adjustment sensitivity</string>
     <string name="auto_brightness_sensitivity_verylow">Very low</string>
