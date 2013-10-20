@@ -54,6 +54,9 @@
         android:title="@string/enforce_read_external_title"
         android:summary="@string/enforce_read_external_summary" />
 
+    <Preference android:key="restart_systemui"
+        android:title="@string/restart_systemui" />
+
     <PreferenceCategory android:key="debug_debugging_category"
             android:title="@string/debug_debugging_category">
 

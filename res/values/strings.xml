@@ -4527,6 +4527,11 @@
     <!-- Restrictions summary for allowing location sharing [CHAR LIMIT=100] -->
     <string name="restriction_location_enable_summary" >Let apps use your location information</string>
 
+    <!-- Start of TEMASEK Additions -->
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Restart SystemUI</string>
+    <!-- End of TEMASEK Additions -->
+
     <!-- Wizard back button label [CHAR LIMIT=25] -->
     <string name="wizard_back">Back</string>
     <!-- Wizard next button label [CHAR LIMIT=25] -->

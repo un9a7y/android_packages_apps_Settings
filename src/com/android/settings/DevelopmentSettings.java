@@ -67,6 +67,8 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.android.settings.util.Helpers;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -92,6 +94,7 @@ public class DevelopmentSettings extends PreferenceFragment
     private static final String ENABLE_ADB = "enable_adb";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ADB_NOTIFY = "adb_notify";
+    private static final String RESTART_SYSTEMUI = "restart_systemui";
 
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
     private static final String ALLOW_MOCK_LOCATION = "allow_mock_location";
@@ -160,6 +163,7 @@ public class DevelopmentSettings extends PreferenceFragment
     private CheckBoxPreference mEnableAdb;
     private Preference mClearAdbKeys;
     private CheckBoxPreference mAdbNotify;
+    private Preference mRestartSystemUI;
     private Preference mBugreport;
     private CheckBoxPreference mBugreportInPower;
     private CheckBoxPreference mKeepScreenOn;
@@ -241,6 +245,8 @@ public class DevelopmentSettings extends PreferenceFragment
                 debugDebuggingCategory.removePreference(mClearAdbKeys);
             }
         }
+
+        mRestartSystemUI = findPreference(RESTART_SYSTEMUI);
 
         mAdbNotify = findAndInitCheckboxPref(ADB_NOTIFY);
         mBugreport = findPreference(BUGREPORT);
@@ -1140,6 +1146,8 @@ public class DevelopmentSettings extends PreferenceFragment
                         .setPositiveButton(android.R.string.ok, this)
                         .setNegativeButton(android.R.string.cancel, null)
                         .show();
+        } else if (preference == mRestartSystemUI) {
+            Helpers.restartSystemUI();
         } else if (preference == mAdbNotify) {
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ADB_NOTIFY,
