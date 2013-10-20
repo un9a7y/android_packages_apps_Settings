@@ -1926,6 +1926,9 @@
     <!-- About phone screen,  setting option name-->
     <string name="build_number">Build number</string>
     <!-- About phone screen,  setting option name-->
+    <string name="temasek_version">Temasek HOMEMADE version</string>
+    <string name="temasek_version_default">Unknown</string>
+    <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
