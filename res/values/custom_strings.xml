@@ -15,6 +15,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Start of TEMASEK Additions -->
+    <!-- About phone screen,  setting option name-->
+    <string name="temasek_version">Temasek HOMEMADE version</string>
+    <string name="temasek_version_default">Unknown</string>
+
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Restart SystemUI</string>
+
+    <!-- Shortcut picker -->
+    <string name="use_custom_app_title">Use custom application</string>
+    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
+    <string name="group_applications">Applications</string>
+    <!-- End of TEMASEK Additions -->
+
     <!--- Sms security limit -->
     <string name="app_security_title">App security</string>
 

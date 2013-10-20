@@ -1926,9 +1926,6 @@
     <!-- About phone screen,  setting option name-->
     <string name="build_number">Build number</string>
     <!-- About phone screen,  setting option name-->
-    <string name="temasek_version">Temasek HOMEMADE version</string>
-    <string name="temasek_version_default">Unknown</string>
-    <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
@@ -4526,11 +4523,6 @@
     <string name="restriction_location_enable_title">Location access</string>
     <!-- Restrictions summary for allowing location sharing [CHAR LIMIT=100] -->
     <string name="restriction_location_enable_summary" >Let apps use your location information</string>
-
-    <!-- Start of TEMASEK Additions -->
-    <!-- Restart SystemUI -->
-    <string name="restart_systemui">Restart SystemUI</string>
-    <!-- End of TEMASEK Additions -->
 
     <!-- Wizard back button label [CHAR LIMIT=25] -->
     <string name="wizard_back">Back</string>
