@@ -48,20 +48,14 @@
                 android:title="@string/screensaver_settings_title"
                 android:fragment="com.android.settings.DreamSettings" />
 
-        <com.android.settings.WarnedListPreference
+        <com.android.settings.FontDialogPreference
                 android:key="font_size"
                 android:title="@string/title_font_size"
                 android:summary="@string/summary_font_size"
-                android:entries="@array/entries_font_size"
-                android:entryValues="@array/entryvalues_font_size"
                 android:dialogTitle="@string/dialog_title_font_size" />
 
-        <!--<CheckBoxPreference
-            android:key="notification_pulse"
-            android:title="@string/notification_pulse_title"
-            android:persistent="false" />-->
-
         <PreferenceScreen
+                android:key="notification_light"
                 android:title="@string/notification_light_settings"
                 android:fragment="org.omnirom.omnigears.notificationlight.NotificationLightSettings" />
 

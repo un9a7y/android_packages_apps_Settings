@@ -58,7 +58,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_ACCELEROMETER = "accelerometer";
     private static final String KEY_FONT_SIZE = "font_size";
-    //private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
+    private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_WIFI_DISPLAY = "wifi_display";
 
@@ -67,11 +67,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private DisplayManager mDisplayManager;
 
     private CheckBoxPreference mAccelerometer;
-    private WarnedListPreference mFontSizePref;
-    //private CheckBoxPreference mNotificationPulse;
+    private FontDialogPreference mFontSizePref;
+    private Preference mNotificationLight;
 
     private final Configuration mCurConfig = new Configuration();
-    
     private ListPreference mScreenTimeoutPreference;
     private Preference mScreenSaverPreference;
 
@@ -107,7 +106,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                         com.android.internal.R.bool.config_dreamsSupported) == false) {
             getPreferenceScreen().removePreference(mScreenSaverPreference);
         }
-        
+
         mScreenTimeoutPreference = (ListPreference) findPreference(KEY_SCREEN_TIMEOUT);
         final long currentTimeout = Settings.System.getLong(resolver, SCREEN_OFF_TIMEOUT,
                 FALLBACK_SCREEN_TIMEOUT_VALUE);
@@ -116,23 +115,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
 
-        mFontSizePref = (WarnedListPreference) findPreference(KEY_FONT_SIZE);
+        mFontSizePref = (FontDialogPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
         mFontSizePref.setOnPreferenceClickListener(this);
-        /*mNotificationPulse = (CheckBoxPreference) findPreference(KEY_NOTIFICATION_PULSE);
-        if (mNotificationPulse != null
+        mNotificationLight = (Preference) findPreference(KEY_NOTIFICATION_LIGHT);
+        if (mNotificationLight != null
                 && getResources().getBoolean(
                         com.android.internal.R.bool.config_intrusiveNotificationLed) == false) {
-            getPreferenceScreen().removePreference(mNotificationPulse);
-        } else {
-            try {
-                mNotificationPulse.setChecked(Settings.System.getInt(resolver,
-                        Settings.System.NOTIFICATION_LIGHT_PULSE) == 1);
-                mNotificationPulse.setOnPreferenceChangeListener(this);
-            } catch (SettingNotFoundException snfe) {
-                Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
-            }
-        }*/
+            getPreferenceScreen().removePreference(mNotificationLight);
+        }
 
         mDisplayManager = (DisplayManager)getActivity().getSystemService(
                 Context.DISPLAY_SERVICE);
@@ -207,37 +198,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
     }
 
-    int floatToIndex(float val) {
-        String[] indices = getResources().getStringArray(R.array.entryvalues_font_size);
-        float lastVal = Float.parseFloat(indices[0]);
-        for (int i=1; i<indices.length; i++) {
-            float thisVal = Float.parseFloat(indices[i]);
-            if (val < (lastVal + (thisVal-lastVal)*.5f)) {
-                return i-1;
-            }
-            lastVal = thisVal;
-        }
-        return indices.length-1;
-    }
-    
-    public void readFontSizePreference(ListPreference pref) {
-        try {
-            mCurConfig.updateFrom(ActivityManagerNative.getDefault().getConfiguration());
-        } catch (RemoteException e) {
-            Log.w(TAG, "Unable to retrieve font size");
-        }
-
-        // mark the appropriate item in the preferences list
-        int index = floatToIndex(mCurConfig.fontScale);
-        pref.setValueIndex(index);
-
-        // report the current size in the summary text
-        final Resources res = getResources();
-        String[] fontSizeNames = res.getStringArray(R.array.entries_font_size);
-        pref.setSummary(String.format(res.getString(R.string.summary_font_size),
-                fontSizeNames[index]));
-    }
-    
     @Override
     public void onResume() {
         super.onResume();
@@ -317,6 +277,22 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mAccelerometer.setChecked(!RotationPolicy.isRotationLocked(getActivity()));
     }
 
+    /**
+     * Reads the current font size and sets the value in the summary text
+     */
+    public void readFontSizePreference(Preference pref) {
+        try {
+            mCurConfig.updateFrom(ActivityManagerNative.getDefault().getConfiguration());
+        } catch (RemoteException e) {
+            Log.w(TAG, "Unable to retrieve font size");
+        }
+
+        // report the current size in the summary text
+        final Resources res = getResources();
+        String fontDesc = FontDialogPreference.getFontSizeDescription(res, mCurConfig.fontScale);
+        pref.setSummary(getString(R.string.summary_font_size, fontDesc));
+    }
+
     public void writeFontSizePreference(Object objValue) {
         try {
             mCurConfig.fontScale = Float.parseFloat(objValue.toString());
@@ -331,15 +307,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mAccelerometer) {
             RotationPolicy.setRotationLockForAccessibility(
                     getActivity(), !mAccelerometer.isChecked());
-        } /*else if (preference == mNotificationPulse) {
-            boolean value = mNotificationPulse.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
-                    value ? 1 : 0);
-            return true;
-        }*/
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
+    @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
         if (KEY_SCREEN_TIMEOUT.equals(key)) {

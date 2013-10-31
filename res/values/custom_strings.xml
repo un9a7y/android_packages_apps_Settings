@@ -107,10 +107,17 @@
     <string name="slide_lock_delay_10m">10 minutes</string>
     <string name="slide_lock_delay_30m">30 minutes</string>
 
+    <!-- Android debugging over WiFi -->
+    <string name="adb_over_network">ADB over network</string>
+    <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi-Fi, USB networks). This setting is reset on reboot</string>
+    <!-- Warning for Adb over Network -->
+    <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks, including GSM data network!\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
+
     <!-- Main list strings -->
     <string name="header_category_interface">Interface</string>
     <string name="notification_light_settings">Notification light</string>
     <string name="performance_settings">Performance</string>
+    <string name="header_button_settings">Buttons</string>
 
     <!-- About phone screen,  setting option name-->
     <string name="mod_version">Omni version</string>
@@ -120,4 +127,9 @@
     <string name="show_cpu_info">Show CPU info</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
+
+    <string name="volume_adjust_sounds_enable_title">Volume adjust sound</string>
+    <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
+    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
+    <string name="volume_ring_only_description">Ringtone</string>
 </resources>
