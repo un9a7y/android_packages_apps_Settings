@@ -17,15 +17,15 @@
     <!-- Sound settings screen -->
     <string name="ring_mode_title">وضع الرنين</string>
     <string name="ring_mode_normal">عام</string>
-    <string name="ring_mode_vibrate">هزاز</string>
+    <string name="ring_mode_vibrate">اهتزاز</string>
     <string name="ring_mode_mute">صامت</string>
 
     <string name="increasing_ring_title">الرنين التصاعدي</string>
     <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
-    <string name="checkbox_increasing_ring">تمكين</string>
+    <string name="checkbox_increasing_ring">تفعيل</string>
     <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
     <string name="increasing_ring_min_volume_title">مستوى الصوت عند البدء</string>
-    <string name="increasing_ring_volume_notice">ملاحظة:\nفي حال وضع مستوى الصوت عند البدء أعلى من مستوى صوت الرنين سيتم استخدام مستوى صوت الرنين الأساسي.</string>
+    <string name="increasing_ring_volume_notice">ملاحظة:\nحال وضع مستوى الصوت عند البدء أعلى من مستوى صوت الرنين سيتم استخدام مستوى صوت الرنين.</string>
     <string name="increasing_ring_interval_title">فترة التصاعد</string>
     <string name="increasing_ring_interval_eachring">على كل رنة</string>
     <string name="increasing_ring_interval_half_second">0.5 ثانية</string>
@@ -36,11 +36,11 @@
     <string name="increasing_ring_interval_10seconds">10 ٍثوان</string>
 
     <!-- Profiles settings  -->
-    <string name="profiles_settings_title">الملفات الشخصية</string>
+    <string name="profiles_settings_title">المظاهر</string>
     <string name="profiles_add">إضافة</string>
     <string name="profile_menu_delete">مسح</string>
-    <string name="profile_settings_title">الملف الشخصي</string>
-    <string name="profile_empty_list_profiles_off">لتكوين واستخدام الملفات الشخصية قم بتمكين الملفات الشخصية.</string>
+    <string name="profile_settings_title">المظهر</string>
+    <string name="profile_empty_list_profiles_off">لاستخدام المظاهر قم بتفعيلها.</string>
     <string name="profile_trigger_configure">Configure trigger</string>
     <string name="profile_triggers">Triggers</string>
     <string name="profile_trigger_filter_all">All triggers</string>
@@ -57,26 +57,26 @@
     <string name="profile_select">Select profile</string>
 
     <!-- Add Profile -->
-    <string name="add_profile_dialog_title">إضافة ملف جديد</string>
+    <string name="add_profile_dialog_title">إضافة مظهر جديد</string>
     <string name="profile_name_title">الإسم</string>
-    <string name="profile_profile_name_prompt">أدخل إسم للملف الجديد</string>
-    <string name="menu_new_profile">ملف جديد</string>
-    <string name="new_profile_name">&lt;ملف جديد&gt;</string>
+    <string name="profile_profile_name_prompt">أدخل اسم للمظهر الجديد</string>
+    <string name="menu_new_profile">مظهر جديد</string>
+    <string name="new_profile_name">&lt;مظهر جديد&gt;</string>
 
     <!-- Rename Dialog  -->
     <string name="rename_dialog_title">إعادة التسمية</string>
-    <string name="rename_dialog_message">أدخل الإسم الجديد</string>
-    <string name="duplicate_profile_name">Duplicate profile name!</string>
-    <string name="duplicate_appgroup_name">Duplicate app group name!</string>
+    <string name="rename_dialog_message">ادخل الاسم الجديد</string>
+    <string name="duplicate_profile_name">اسم المظهر مكرر</string>
+    <string name="duplicate_appgroup_name">اسم المجموعة مكرر</string>
 
     <!-- Reset Profiles -->
-    <string name="profile_reset_title">Reset</string>
-    <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
+    <string name="profile_reset_title">إعادة تعيين</string>
+    <string name="profile_reset_message">مسح كافة إعدادات المستخدم والعودة للإعدادات السابقة</string>
 
     <!-- Delete confimation messages -->
-    <string name="profile_delete_confirm">Delete this profile?</string>
-    <string name="profile_app_delete_confirm">Remove this app?</string>
-    <string name="profile_cannot_delete">An active profile cannot be deleted</string>
+    <string name="profile_delete_confirm">مسح هذا المظهر؟</string>
+    <string name="profile_app_delete_confirm">حذف هذا البرنامج؟</string>
+    <string name="profile_cannot_delete">لا يمكن مسح المظهر المفعل</string>
 
     <!-- Profile network mode -->
     <string name="profile_networkmode_2g">2G</string>
@@ -86,8 +86,8 @@
     <!-- Profile Config screen PreferenceGroup titles -->
     <string name="profile_connectionoverrides_title">Connection overrides</string>
     <string name="profile_volumeoverrides_title">Volume overrides</string>
-    <string name="connection_state_disabled">Disable</string>
-    <string name="connection_state_enabled">Enable</string>
+    <string name="connection_state_disabled">تعطيل</string>
+    <string name="connection_state_enabled">تفعيل</string>
     <string name="volume_override_summary">Set to</string>
 
     <!-- Menu item for managing profiles -->
@@ -97,7 +97,7 @@
     <string name="profile_appgroup_manage">Manage app group</string>
 
     <!-- Profile settings screen, section header for settings related to notification profiles -->
-    <string name="profile_settings">Profile settings</string>
+    <string name="profile_settings">إعدادات المظهر</string>
     <string name="profile_trigger_connect">On connect</string>
     <string name="profile_trigger_disconnect">On disconnect</string>
     <string name="profile_trigger_notrigger">No trigger</string>
