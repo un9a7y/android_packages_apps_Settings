@@ -15,32 +15,32 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Sound settings screen -->
-    <string name="ring_mode_title">Ring mode</string>
-    <string name="ring_mode_normal">Normal</string>
-    <string name="ring_mode_vibrate">Vibrate</string>
-    <string name="ring_mode_mute">Mute</string>
+    <string name="ring_mode_title">وضع الرنين</string>
+    <string name="ring_mode_normal">عام</string>
+    <string name="ring_mode_vibrate">هزاز</string>
+    <string name="ring_mode_mute">صامت</string>
 
-    <string name="increasing_ring_title">Ascending ringtone</string>
+    <string name="increasing_ring_title">الرنين التصاعدي</string>
     <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
-    <string name="checkbox_increasing_ring">Enable</string>
+    <string name="checkbox_increasing_ring">تمكين</string>
     <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
-    <string name="increasing_ring_min_volume_title">Ringing start volume</string>
-    <string name="increasing_ring_volume_notice">Notice:\nAs the start volume is set higher than the ringer volume, the ring tone will be played using the ringer volume.</string>
-    <string name="increasing_ring_interval_title">Increase interval</string>
-    <string name="increasing_ring_interval_eachring">On each ring</string>
-    <string name="increasing_ring_interval_half_second">0.5 seconds</string>
-    <string name="increasing_ring_interval_1second">1 second</string>
-    <string name="increasing_ring_interval_2seconds">2 seconds</string>
-    <string name="increasing_ring_interval_3seconds">3 seconds</string>
-    <string name="increasing_ring_interval_5seconds">5 seconds</string>
-    <string name="increasing_ring_interval_10seconds">10 seconds</string>
+    <string name="increasing_ring_min_volume_title">مستوى الصوت عند البدء</string>
+    <string name="increasing_ring_volume_notice">ملاحظة:\nفي حال وضع مستوى الصوت عند البدء أعلى من مستوى صوت الرنين سيتم استخدام مستوى صوت الرنين الأساسي.</string>
+    <string name="increasing_ring_interval_title">فترة التصاعد</string>
+    <string name="increasing_ring_interval_eachring">على كل رنة</string>
+    <string name="increasing_ring_interval_half_second">0.5 ثانية</string>
+    <string name="increasing_ring_interval_1second">1 ثانية</string>
+    <string name="increasing_ring_interval_2seconds">2 ثانيتان</string>
+    <string name="increasing_ring_interval_3seconds">3 ٍثوان</string>
+    <string name="increasing_ring_interval_5seconds">5 ٍثوان</string>
+    <string name="increasing_ring_interval_10seconds">10 ٍثوان</string>
 
     <!-- Profiles settings  -->
-    <string name="profiles_settings_title">Profiles</string>
-    <string name="profiles_add">Add</string>
-    <string name="profile_menu_delete">Delete</string>
-    <string name="profile_settings_title">Profile</string>
-    <string name="profile_empty_list_profiles_off">To configure and use system profiles, turn profiles on.</string>
+    <string name="profiles_settings_title">الملفات الشخصية</string>
+    <string name="profiles_add">إضافة</string>
+    <string name="profile_menu_delete">مسح</string>
+    <string name="profile_settings_title">الملف الشخصي</string>
+    <string name="profile_empty_list_profiles_off">لتكوين واستخدام الملفات الشخصية قم بتمكين الملفات الشخصية.</string>
     <string name="profile_trigger_configure">Configure trigger</string>
     <string name="profile_triggers">Triggers</string>
     <string name="profile_trigger_filter_all">All triggers</string>
@@ -57,15 +57,15 @@
     <string name="profile_select">Select profile</string>
 
     <!-- Add Profile -->
-    <string name="add_profile_dialog_title">Create new profile</string>
-    <string name="profile_name_title">Name</string>
-    <string name="profile_profile_name_prompt">Enter a name for the new profile</string>
-    <string name="menu_new_profile">New profile</string>
-    <string name="new_profile_name">&lt;new profile&gt;</string>
+    <string name="add_profile_dialog_title">إضافة ملف جديد</string>
+    <string name="profile_name_title">الإسم</string>
+    <string name="profile_profile_name_prompt">أدخل إسم للملف الجديد</string>
+    <string name="menu_new_profile">ملف جديد</string>
+    <string name="new_profile_name">&lt;ملف جديد&gt;</string>
 
     <!-- Rename Dialog  -->
-    <string name="rename_dialog_title">Rename</string>
-    <string name="rename_dialog_message">Enter a new name</string>
+    <string name="rename_dialog_title">إعادة التسمية</string>
+    <string name="rename_dialog_message">أدخل الإسم الجديد</string>
     <string name="duplicate_profile_name">Duplicate profile name!</string>
     <string name="duplicate_appgroup_name">Duplicate app group name!</string>
 
