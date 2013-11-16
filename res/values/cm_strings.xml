@@ -103,12 +103,12 @@
     <string name="profile_trigger_notrigger">No trigger</string>
 
     <!-- Profile Settings sound modes labels -->
-    <string name="sound_mode">Notification mode</string>
-    <string name="ringer_mode">Ring mode</string>
-    <string name="lights_mode">Lights mode</string>
-    <string name="vibrate_mode">Vibrate mode</string>
-    <string name="choose_soundtone">Choose notification tone</string>
-    <string name="choose_ringtone">Choose ringtone</string>
+    <string name="sound_mode">وضع الإشعارات</string>
+    <string name="ringer_mode">وضع الرنين</string>
+    <string name="lights_mode">الوميض</string>
+    <string name="vibrate_mode">وضع الاهتزاز</string>
+    <string name="choose_soundtone">اختيار نغمة الإشعارات</string>
+    <string name="choose_ringtone">اختيار النغمة</string>
 
     <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
     <string name="soundtone_title">Notification tone</string>
@@ -123,43 +123,43 @@
     <string name="profile_appgroup_name_title">Name</string>
 
     <!-- Add application dialog box title -->
-    <string name="profile_choose_app">Choose app</string>
+    <string name="profile_choose_app">اختر برنامج</string>
 
     <!-- Profiles - system settings -->
-    <string name="profile_system_settings_title">System settings</string>
-    <string name="profile_lockmode_title">Lock screen mode</string>
-    <string name="profile_lockmode_default">Default</string>
-    <string name="profile_lockmode_insecure">Insecure</string>
-    <string name="profile_lockmode_disabled">Disabled</string>
-    <string name="profile_lockmode_default_summary">Use system default</string>
-    <string name="profile_lockmode_insecure_summary">Use insecure lock screen</string>
-    <string name="profile_lockmode_disabled_summary">Lock screen is disabled</string>
-    <string name="profile_airplanemode_title">Airplane mode</string>
+    <string name="profile_system_settings_title">إعدادات النظام</string>
+    <string name="profile_lockmode_title">قفل الشاشة</string>
+    <string name="profile_lockmode_default">افتراضي</string>
+    <string name="profile_lockmode_insecure">غير آمن</string>
+    <string name="profile_lockmode_disabled">تعطيل</string>
+    <string name="profile_lockmode_default_summary">استخدام النظام الافتراضي</string>
+    <string name="profile_lockmode_insecure_summary">استخدام القفل الغير آمن</string>
+    <string name="profile_lockmode_disabled_summary">خاصية قفل الشاشة معطلة</string>
+    <string name="profile_airplanemode_title">وضع الطيران</string>
 
     <!-- Connection override toggles (not all are used at this time ) -->
-    <string name="toggleWifi">Wi-Fi</string>
-    <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
-    <string name="toggleBluetooth">Bluetooth</string>
-    <string name="toggleGPS">GPS</string>
-    <string name="toggleData">Mobile Data</string>
-    <string name="toggleSync">Data Sync</string>
-    <string name="toggle2g3g">2G/3G</string>
-    <string name="toggleWimax">WiMAX</string>
-    <string name="toggleNfc">NFC</string>
+    <string name="toggleWifi">البث اللاسلكي</string>
+    <string name="toggleWifiAp">نقطة الإتصال</string>
+    <string name="toggleBluetooth">البلوتوث</string>
+    <string name="toggleGPS">الموقع</string>
+    <string name="toggleData">البيانات النقالة</string>
+    <string name="toggleSync">مزامنة</string>
+    <string name="toggle2g3g">وضع الشبكة</string>
+    <string name="toggleWimax">تقنية وايماكس</string>
+    <string name="toggleNfc">تقنية التواصل</string>
 
     <!-- Lights settings screen, notification light settings -->
-    <string name="display_lights_settings_title">Display &amp; lights</string>
-    <string name="lights_category_title">Lights</string>
-    <string name="notification_pulse_title">Notification light</string>
-    <string name="notification_light_general_title">General</string>
-    <string name="notification_light_applist_title">Applications</string>
-    <string name="notification_light_phonelist_title">Phone</string>
-    <string name="notification_light_use_custom">Use custom values</string>
-    <string name="notification_light_enabled">Enabled</string>
-    <string name="notification_light_disabled">Disabled</string>
-    <string name="notification_light_default_value">Default</string>
-    <string name="notification_light_missed_call_title">Missed call</string>
-    <string name="notification_light_voicemail_title">Voicemail</string>
+    <string name="display_lights_settings_title">الشاشة والإضاءات</string>
+    <string name="lights_category_title">الوميض</string>
+    <string name="notification_pulse_title">وميض الإشعارات</string>
+    <string name="notification_light_general_title">عام</string>
+    <string name="notification_light_applist_title">برامج</string>
+    <string name="notification_light_phonelist_title">هاتف</string>
+    <string name="notification_light_use_custom">استخدم قيم مخصصة</string>
+    <string name="notification_light_enabled">مفعل</string>
+    <string name="notification_light_disabled">معطل</string>
+    <string name="notification_light_default_value">افتراضي</string>
+    <string name="notification_light_missed_call_title">مكالمة لم يرد عليها</string>
+    <string name="notification_light_voicemail_title">البريد الصوتي</string>
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
@@ -200,33 +200,33 @@
     <string name="tile_picker_summary">View, select or change the layout of the displayed tiles</string>
     <string name="tile_choose_title">Choose a tile</string>
 
-    <string name="title_tile_airplane">Airplane mode</string>
-    <string name="title_tile_battery">Battery stats</string>
-    <string name="title_tile_bluetooth">Bluetooth</string>
-    <string name="title_tile_brightness">Brightness</string>
-    <string name="title_tile_camera">Camera</string>
-    <string name="title_tile_sleep">Go to sleep</string>
-    <string name="title_tile_gps">GPS</string>
-    <string name="title_tile_torch">Torch</string>
-    <string name="title_tile_lockscreen">Lock screen</string>
-    <string name="title_tile_lte">LTE</string>
-    <string name="title_tile_mobiledata">Mobile data</string>
-    <string name="title_tile_profile">Profile</string>
+    <string name="title_tile_airplane">وضع الطيران</string>
+    <string name="title_tile_battery">البطارية</string>
+    <string name="title_tile_bluetooth">البلوتوث</string>
+    <string name="title_tile_brightness">السطوع</string>
+    <string name="title_tile_camera">الكاميرا</string>
+    <string name="title_tile_sleep">سبات</string>
+    <string name="title_tile_gps">الموقع</string>
+    <string name="title_tile_torch">المصباح</string>
+    <string name="title_tile_lockscreen">قفل الشاشة</string>
+    <string name="title_tile_lte">الجيل الرابع</string>
+    <string name="title_tile_mobiledata">البيانات النقالة</string>
+    <string name="title_tile_profile">المظهر</string>
     <string name="title_tile_performance_profile">Performance profile</string>
-    <string name="title_tile_autorotate">Orientation</string>
-    <string name="title_tile_settings">Settings</string>
-    <string name="title_tile_sound">Sound</string>
-    <string name="title_tile_sync">Sync</string>
-    <string name="title_tile_wifiap">Wi-Fi AP</string>
-    <string name="title_tile_wifi">Wi-Fi</string>
-    <string name="title_tile_user">User switcher</string>
-    <string name="title_tile_networkmode">Network mode</string>
-    <string name="title_tile_nfc">NFC</string>
-    <string name="title_tile_screen_timeout">Screen timeout</string>
-    <string name="title_tile_quiet_hours">Quiet hours</string>
-    <string name="title_tile_volume">Volume</string>
-    <string name="title_tile_expanded_desktop">Expanded desktop</string>
-    <string name="title_tile_network_adb">ADB over network</string>
+    <string name="title_tile_autorotate">الإتجاه</string>
+    <string name="title_tile_settings">الإعدادات</string>
+    <string name="title_tile_sound">الصوت</string>
+    <string name="title_tile_sync">المزامنة</string>
+    <string name="title_tile_wifiap">نقطة الإتصال</string>
+    <string name="title_tile_wifi">البث اللاسلكي</string>
+    <string name="title_tile_user">تغيير المستخدم</string>
+    <string name="title_tile_networkmode">وضع الشبكة</string>
+    <string name="title_tile_nfc">تقنية التواصل</string>
+    <string name="title_tile_screen_timeout">مهلة الشاشة</string>
+    <string name="title_tile_quiet_hours">ساعات السكون</string>
+    <string name="title_tile_volume">مستوى الصوت</string>
+    <string name="title_tile_expanded_desktop">شاشة ممدودة</string>
+    <string name="title_tile_network_adb">جسر التصحيح عبر الشبكة</string>
 
     <string name="title_dynamic_tiles">Dynamic tiles</string>
     <string name="dynamic_tiles_note_title">Note</string>
@@ -238,8 +238,8 @@
     <string name="title_dynamic_usbtether">USB Tether</string>
     <string name="title_dynamic_wifi">Wi-Fi display</string>
 
-    <string name="title_general">General</string>
-    <string name="title_quick_pulldown">Quick pulldown</string>
+    <string name="title_general">عام</string>
+    <string name="title_quick_pulldown">السحب السريع</string>
     <string name="summary_quick_pulldown">%1$s edge of the status bar pulls down Quick Settings</string>
     <string name="quick_pulldown_summary_left">Left</string>
     <string name="quick_pulldown_summary_right">Right</string>
